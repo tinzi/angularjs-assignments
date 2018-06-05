@@ -6,26 +6,30 @@
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <style>
       .message { font-size: 1.3em; font-weight: bold; }
+      .message-green { font-size: 1.3em; font-weight: bold; color: green; }
+      .message-red { font-size: 1.3em; font-weight: bold; color: red; }
+      .border-green { border-color: green ;}
+      .border-red { border-color: red ;}
     </style>
     <script src="angular.min.js"></script>
     <script src="app.js"></script>
   </head>
-<body ng-app='LunchCheck' >
-   <div class="container" ng-controller='LunchCheckController'>
-     <h1>Lunch Checker</h1>
+  <body ng-app='LunchCheck' >
+     <div class="container" ng-controller='LunchCheckController'>
+       <h1>Lunch Checker</h1>
 
-         <div class="form-group">
-             <input id="lunch-menu" type="text"
-             placeholder="list comma separated dishes you usually have for lunch"
-             class="form-control" ng-model="lunchItemList"></input>
-         </div>
-         <div class="form-group">
-             <button class="btn btn-default" ng-click="checkItems()">Check If Too Much</button>
-         </div>
-         <div class="form-group message">
-           {{feedbackMessage}}
-         </div>
-   </div>
-
-</body>
+           <div class="form-group">
+               <input id="lunch-menu" type="text"
+               placeholder="list comma separated dishes you usually have for lunch"
+               class="form-control {{borderColor}}" ng-model="lunchItemList"></input>
+               <p>(empty items are NOT considered)</p>
+           </div>
+           <div class="form-group">
+               <button class="btn btn-default" ng-click="checkItems()">Check If Too Much</button>
+           </div>
+           <div class="form-group {{messageClass}}">
+             {{feedbackMessage}}
+           </div>
+     </div>
+  </body>
 </html>
