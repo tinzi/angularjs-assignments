@@ -5,3 +5,5 @@ This repository contains the assignments of Coursera course [Single Page Web App
 [Test Assignment 1](https://tinzi.github.io/angularjs-assignments/solution-assignment1)
 
 [Test Assignment 2](https://tinzi.github.io/angularjs-assignments/solution-assignment2)
+
+[Test Assignment 3](https://tinzi.github.io/angularjs-assignments/solution-assignment3)
